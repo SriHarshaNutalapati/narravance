@@ -1,0 +1,31 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:5173",
+            "webRoot": "${workspaceFolder}/frontend"
+        },
+        {
+            "name": "Python: Flask",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/backend/app.py",  // Adjust to your Flask app entry point
+            "args": [
+                "run",  // You can replace this with other commands if needed
+                "--no-debugger",
+                "--no-reload"
+            ],
+            "jinja": true,
+            "env": {
+                "FLASK_APP": "app.py",  // Set to your entry point file
+                "FLASK_ENV": "development"
+            },
+        }
+    ]
+}
